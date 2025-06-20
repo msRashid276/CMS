@@ -1,16 +1,25 @@
 package model;
 
-public class Contact extends Person {
-	
+public class Contact extends Person{
 	private int id;
 	private String email;
 	private String phoneNumber;
-
-	public Contact(String firstName, String lastName,String email,String phoneNumber) {
-		super(firstName, lastName);
+	
+	
+	public Contact() {}
+	
+	public Contact(int id,String firstName,String lastName,String email,String phoneNumber) {
+		super(firstName,lastName);
 		this.id=id;
-		this.id=id;
+		this.email=email;
 		this.phoneNumber=phoneNumber;
+		
+	}
+	
+	@Override
+	public void displayInfo() {
+		super.displayInfo();
+		System.out.println("Email:"+ email + ",Phone :"+ phoneNumber);
 		
 	}
 
@@ -37,5 +46,5 @@ public class Contact extends Person {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-
+	  
 }

@@ -4,16 +4,23 @@ public class ContactDTO {
 	
 	private int id;
 	private String firstName;
-	public ContactDTO(String firstName, String lastName, String email, String phoneNumber) {
 	
+	private String lastName;
+	private String email;
+	private String phoneNumber;
+	
+	
+	public ContactDTO(String firstName, String lastName, String email, String phoneNumber) {
+		
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 	}
-	private String lastName;
-	private String email;
-	private String phoneNumber;
+	public ContactDTO() {
+	  
+	}
+
 	public int getId() {
 		return id;
 	}
